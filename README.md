@@ -144,3 +144,5 @@ Cloud Functions dan Scheduler diperlukan agar tindakan admin tervalidasi di serv
 - **Notifikasi tidak masuk:** pastikan public VAPID key benar, konfigurasi di service worker sama, izin browser `Allow`, dan situs memakai HTTPS.
 - **Antrean tidak tampil:** periksa URL Realtime Database, rules yang dipublikasikan, dan log Cloud Functions.
 - **Deploy functions gagal:** pastikan billing/API Scheduler/Cloud Functions aktif, Node runtime kompatibel, dan `firebase use` menunjuk project yang benar.
+#   A n t r e a n - R C  
+ 
