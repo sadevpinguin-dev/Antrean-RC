@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101820"><title>RC Queue — Antrean Main RC</title>
+  <link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-icon">RC</span><span>RC <b>QUEUE</b><small>RACE • PLAY • REPEAT</small></span></a><button id="installNotifications" class="btn btn-outline">Aktifkan notifikasi</button></header>
+<main class="wrap">
+  <section class="hero"><div><span class="eyebrow">REMOTE CONTROL PLAYGROUND</span><h1>Giliranmu.<br><em>Gas 3 menit.</em></h1><p>Daftar antrean, pantau posisi, lalu nikmati waktu bermainmu. Semua status diperbarui langsung.</p><div class="hero-tags"><span>⏱ 03:00 per sesi</span><span>↻ Antrean realtime</span><span>🔔 Notifikasi</span></div></div><div class="hero-art" aria-hidden="true"><div class="track track-one"></div><div class="track track-two"></div><div class="car">▰</div><div class="hero-time">03:00<small>RACE TIME</small></div></div></section>
+  <div id="notice" class="notice hidden" role="status"></div>
+  <section class="grid-main">
+    <article class="panel signup-panel"><div class="section-head"><div><span class="eyebrow">MULAI DARI SINI</span><h2>Daftar antrean</h2></div><span class="live-dot">LIVE</span></div>
+      <form id="joinForm"><label for="playerName">Nama pemain</label><input id="playerName" name="name" maxlength="40" autocomplete="name" placeholder="Contoh: Bima" required><label for="playerPhone">Nomor WhatsApp</label><input id="playerPhone" name="phone" inputmode="tel" autocomplete="tel" placeholder="Contoh: 081234567890" maxlength="20" required><p class="hint">Nomor WhatsApp digunakan untuk identifikasi antrean. Notifikasi otomatis dikirim melalui browser jika diaktifkan, bukan melalui WhatsApp.</p><button class="btn btn-primary full" type="submit" id="joinBtn">Daftar bermain <span>→</span></button></form>
+      <div class="privacy"><span>🔒</span><span>Nomor WhatsApp tidak ditampilkan di papan antrean publik.</span></div>
+    </article>
+    <article class="panel queue-panel"><div class="section-head"><div><span class="eyebrow">PAPAN ANTREAN</span><h2>Antrean saat ini</h2></div><span id="queueCount" class="count-pill">0 pemain</span></div><div id="activePlayer" class="active-player"><div class="empty-icon">🏎</div><div><b>Belum ada pemain aktif</b><p>Admin akan memulai sesi berikutnya.</p></div></div><div class="queue-head"><span>POSISI / PEMAIN</span><span>STATUS</span></div><div id="queueList" class="queue-list"><div class="empty-state">Memuat antrean…</div></div><div class="queue-foot"><span class="pulse"></span> Sinkronisasi realtime aktif</div></article>
+  </section>
+  <section id="myTicket" class="panel ticket-panel hidden"><div class="section-head"><div><span class="eyebrow">TIKET KAMU</span><h2 id="ticketTitle">Pendaftaran berhasil</h2></div><span id="ticketStatus" class="status-badge">MENUNGGU</span></div><div class="ticket-body"><div class="ticket-number"><small>NOMOR ANTREAN</small><strong id="ticketNumber">—</strong></div><div class="ticket-info"><b id="ticketName">Pemain</b><span id="ticketMessage">Pantau status antreanmu di sini.</span><span id="ticketTimer" class="ticket-timer">--:--</span></div></div><button id="clearTicket" class="btn btn-outline">Sembunyikan tiket di perangkat ini</button></section>
+  <footer><span>RC QUEUE SYSTEM</span><span>Play fair. Take turns. Have fun.</span><a href="/admin.html">Admin</a></footer>
+</main>
+<script type="module" src="/app.js"></script>
+</body></html>

@@ -1,0 +1,28 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "publicQueue": {
+      ".read": true,
+      ".write": false
+    },
+    "publicTickets": {
+      "$ticketId": {
+        ".read": true,
+        ".write": false
+      }
+    },
+    "privateQueue": {
+      ".read": "auth != null && auth.token.admin === true",
+      ".write": false
+    },
+    "pushTokens": {
+      ".read": false,
+      ".write": false
+    },
+    "serverTimeOffset": {
+      ".read": true,
+      ".write": false
+    }
+  }
+}
